@@ -1,0 +1,23 @@
+{
+  "name": "serverless-multi-region-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "dependencies": {},
+  "devDependencies": {
+    "serverless-domain-manager": "^5.2.0"
+  },
+  "scripts": {
+    "deploy": "serverless deploy --region us-east-1 --stage sbx && serverless deploy --region us-west-2 --stage sbx"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clintadams-sg/serverless-multi-region-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clintadams-sg/serverless-multi-region-demo/issues"
+  },
+  "homepage": "https://github.com/clintadams-sg/serverless-multi-region-demo#readme"
+}

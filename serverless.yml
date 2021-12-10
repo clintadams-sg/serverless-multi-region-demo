@@ -1,0 +1,27 @@
+service: serverless-multi-region-demo
+
+frameworkVersion: '2'
+
+plugins:
+  - serverless-domain-manager
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+custom:
+  customDomain:
+    rest:
+      domainName: <your-domain-here>
+      certificateName: <your-certificate-name-here>
+      endpointType: regional
+      route53Params:
+        routingPolicy: latency
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: /
+          method: get
